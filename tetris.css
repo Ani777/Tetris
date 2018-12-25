@@ -1,0 +1,151 @@
+body {
+    background-image: url("bodybackground3.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#nextelementwrapper {
+    float: left;
+    width: 100px;
+    height: 100px;
+    border: 4px solid #102535;
+    border-radius: 10px;
+    margin-top: 35px;
+    margin-left: 280px;
+    background-color: #102535;
+}
+
+#nextelement {
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8));
+}
+
+.cell {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #102535;
+    float:left;
+    box-sizing:border-box;
+}
+
+.cell1 {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #102535;
+    float:left;
+    box-sizing:border-box;
+
+}
+
+
+
+
+#container {
+    width: 350px;
+    height: 550px;
+
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.6));
+
+
+
+}
+
+#wrapper {
+    padding: 5px;
+
+    border: 1px solid #102535;
+    border-radius: 15px;
+    width: 350px;
+    height: 550px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 70px;
+    /*background-color: #104d67;*/
+    background-color: #102535;
+
+
+}
+
+
+#controlpanel{
+    float: left;
+    margin-left: 50px;
+    width: 150px;
+    height: 300px;
+    margin-top: 20px;
+
+}
+
+
+
+.red {
+    background-color: #ff023f;
+}
+
+
+button {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin-left: 25px;
+    margin-top: 20px;
+    width: 90px;
+    height: 32px;
+    font-size: 16px;
+    display: block;
+    border: 2px solid #102535;
+    color: #102535;
+    border-radius: 5px;
+}
+button:hover{
+    font-size: 18px;
+    font-weight: bold;
+    /*height: 28px;*/
+
+}
+
+.finaltext {
+    box-sizing: border-box;
+    color: #ff023f;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.6));
+    font-size: 46px;
+    padding: 220px 0;
+    padding-left: 29px;
+    font-weight: bold;
+    width: 350px;
+    height: 550px;
+    float: left;
+    border: 1px solid #102535;
+}
+
+.mediumpurple {
+    background-color: #fb4551;
+
+}
+
+#level, #points {
+    width: 100px;
+    height: 25px;
+    border: 2px solid #102535;
+    margin-top: 5px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    text-align: right;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    background-color: #ffe4ff;
+    font-weight: 500;
+    color: #102535;
+    border-radius: 5px;
+}
+
+span {
+    display: block;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    color: #102535;
+    margin-left: 30px;
+}
