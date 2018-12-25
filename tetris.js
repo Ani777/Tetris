@@ -13,7 +13,7 @@ const pointsDiv = document.getElementById('points');
 const levelDiv = document.getElementById('level');
 let points = 0;
 let level = 1;
-let speed = 1000;
+let speed = 700;
 let allDeletedRows = 0;
 let nextElement = document.getElementById("nextelement")
 let nextElementIndexes = [[4, 5, 6, 7], [5, 9, 10, 11], [7, 9, 10, 11], [5, 6, 9, 10], [6, 7, 9, 10], [4, 5, 9, 10], [6, 9, 10, 11] ]
@@ -298,8 +298,8 @@ function playGame() {
                     pointsDiv.innerHTML = points;
                     allDeletedRows += deletedRows;
                     if (allDeletedRows >= 10) {
-                        if (speed > 100) {
-                            speed -= 100;
+                        if (speed > 50) {
+                            speed -= 50;
                         } else {
                             speed -= 10;
                         }
