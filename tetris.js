@@ -293,19 +293,20 @@ function playGame() {
                         deletedRows ++;
                     }
                 });
-
-                points += countPoints(deletedRows);
-                pointsDiv.innerHTML = points;
-                allDeletedRows += deletedRows;
-                if(allDeletedRows >= 10){
-                    if (speed > 100) {
-                        speed -= 100;
-                    } else {
-                        speed -= 10;
+                if (deletedRows) {
+                    points += countPoints(deletedRows) * level;
+                    pointsDiv.innerHTML = points;
+                    allDeletedRows += deletedRows;
+                    if (allDeletedRows >= 10) {
+                        if (speed > 100) {
+                            speed -= 100;
+                        } else {
+                            speed -= 10;
+                        }
+                        allDeletedRows -= 10;
+                        level++;
+                        levelDiv.innerHTML = level;
                     }
-                    allDeletedRows -= 10;
-                    level++;
-                    levelDiv.innerHTML = level;
                 }
 
                 playGame();
@@ -400,10 +401,10 @@ function countPoints(deletedRowsCount){
             return 30;
             break;
         case 3:
-            return 60;
+            return 50;
             break;
         case 4:
-            return 120;
+            return 100;
             break;
         default:
             return 0;
