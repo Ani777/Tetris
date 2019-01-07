@@ -344,6 +344,11 @@ function deleteRow(rowIndex) {
     });
 }
 
+
+
+
+
+
 function isFilled(rowIndex) {
     for (let i = 0; i < width; i++) {
         if (!cells[rowIndex * width + i].classList.contains("mediumpurple")) {
