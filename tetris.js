@@ -297,13 +297,13 @@ function playGame() {
                     points += countPoints(deletedRows) * level;
                     pointsDiv.innerHTML = points;
                     allDeletedRows += deletedRows;
-                    if (allDeletedRows >= 10) {
+                    if (allDeletedRows >= 6) {
                         if (speed > 50) {
                             speed -= 50;
                         } else {
                             speed -= 10;
                         }
-                        allDeletedRows -= 10;
+                        allDeletedRows -= 6;
                         level++;
                         levelDiv.innerHTML = level;
                     }
