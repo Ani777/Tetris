@@ -15,14 +15,14 @@ let points = 0;
 let level = 1;
 let speed = 700;
 let allDeletedRows = 0;
-let nextElement = document.getElementById("nextelement")
-let nextElementIndexes = [[4, 5, 6, 7], [5, 9, 10, 11], [7, 9, 10, 11], [5, 6, 9, 10], [6, 7, 9, 10], [4, 5, 9, 10], [6, 9, 10, 11] ]
-let i = Math.floor(Math.random()*7)
+let nextElement = document.getElementById("nextelement");
+let nextElementIndexes = [[4, 5, 6, 7], [5, 9, 10, 11], [7, 9, 10, 11], [5, 6, 9, 10], [6, 7, 9, 10], [4, 5, 9, 10], [6, 9, 10, 11]];
+let i = Math.floor(Math.random() * 7);
 function createNextElement(num) {
     for(let i = 4; i < 12; i++){
         nextElement.children[i].classList.remove('red');
     }
-    nextElementIndexes[num].forEach(index => nextElement.children[index].classList.add('red'))
+    nextElementIndexes[num].forEach(index => nextElement.children[index].classList.add('red'));
 }
 createNextElement(i);
 
@@ -157,8 +157,9 @@ class TetrisElement {
         cells[this.a].classList.add('mediumpurple');
         cells[this.b].classList.add('mediumpurple');
         cells[this.c].classList.add('mediumpurple');
-        cells[this.d].classList.add('mediumpurple')
+        cells[this.d].classList.add('mediumpurple');
     }
+    
     rotate() {
         if (this.name !== "O") {
             let arrOfIndexes = [this.a, this.b, this.c, this.d];
@@ -222,14 +223,9 @@ document.body.addEventListener("keydown", function(e) {
     if (e.keyCode === 38 && !isPaused) {
         element.rotate();
     }
-
-    });
+});
 
 playButton.onclick = playGame;
-
-// pauseButton.onclick = function(){
-//     isPaused = true;
-// }
 
 resumeButton.onclick = function(){
     isPaused = false;
@@ -249,7 +245,7 @@ function playGame() {
         }
     }
     playButton.onclick = null;
-    //let i = Math.floor(Math.random() * 7);
+    
     element = new TetrisElement(...blocks[i]);
     if (
         filledCells.includes(element.a) ||
@@ -262,7 +258,7 @@ function playGame() {
             playButton.onclick = playGame;
             pauseButton.onclick = null;
             document.body.onkeydown = null;
-        }, width * height * 10 + 3000)
+        }, width * height * 10 + 3000);
         return;
     }
     element.showElement();
@@ -324,7 +320,6 @@ function findRowIndexes(...cellNumbers) {
             arr.push(row);
         }
     }
-
     arr.sort((a, b) => a - b);
     return arr;
 }
@@ -343,11 +338,6 @@ function deleteRow(rowIndex) {
         return filledCell;
     });
 }
-
-
-
-
-
 
 function isFilled(rowIndex) {
     for (let i = 0; i < width; i++) {
@@ -416,5 +406,3 @@ function countPoints(deletedRowsCount){
             break;
     }
 }
-
-//playGame();
